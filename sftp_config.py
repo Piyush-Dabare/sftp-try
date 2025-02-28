@@ -14,7 +14,7 @@ class MySFTPServer(ServerInterface):
 
 def sftp_server():
     host_key = paramiko.RSAKey.generate(2048)
-    transport = paramiko.Transport(("0.0.0.0", 10000))
+    transport = paramiko.Transport(("0.0.0.0", 22))
     transport.add_server_key(host_key)
 
     server = MySFTPServer()
